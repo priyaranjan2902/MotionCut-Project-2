@@ -1,0 +1,29 @@
+# PROJECT 2
+
+def count_words(sentence):
+    """
+    Function to count the number of words in a given sentence.
+
+    Parameters:
+    sentence (str): Input sentence or paragraph.
+
+    Returns:
+    int: Number of words in the sentence.
+    """
+    words = sentence.split()
+    return len(words)
+
+def main():
+    try:
+        user_input = input("Please enter a sentence or paragraph: ")
+
+        if not user_input:
+            raise ValueError("Input is empty. Please enter a valid sentence.")
+
+        word_count = count_words(user_input)
+        print(f"The number of words in the input is: {word_count}")
+    except ValueError as ve:
+        print(f"Error: {ve}")
+
+if __name__ == "__main__":
+    main()
